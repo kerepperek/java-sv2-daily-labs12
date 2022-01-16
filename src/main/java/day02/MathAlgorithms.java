@@ -11,4 +11,16 @@ public class MathAlgorithms {
             if(a%result+b%result==0)  return result;
         return 0;
     }
+    public int greatestCommonDivisorWhile(int firstNumber, int secondNumber){
+
+        while(firstNumber!=secondNumber){
+            if(firstNumber>secondNumber){
+                firstNumber-=secondNumber;
+            }else{
+                secondNumber-=firstNumber;
+            }
+        }
+
+        return firstNumber;
+    }
 }
